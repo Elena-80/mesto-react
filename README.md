@@ -3,7 +3,7 @@
 ## Описание:
 
 "Mesto" - страница, где пользователи могут делиться фотографиями. В работе применены расширенные возможности HTML и CSS, JavaScript, работа с DOM, git.
-[Проектная работа на GitHub Pages](https://elena-80.github.io/mesto/)
+[Проектная работа на GitHub Pages](https://elena-80.github.io/mesto-react/)
 
 ## Функционал:
 
@@ -34,12 +34,12 @@
 
 ## Инструкция по установке:
 
-git clone https://github.com/Elena-80/mesto.git
+git clone https://github.com/Elena-80/mesto-react.git
 
 
 ## Языки:
 
 * JavaScript
-
+* React JS
 
 
