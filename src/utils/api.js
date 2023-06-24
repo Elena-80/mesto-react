@@ -48,36 +48,44 @@ class Api {
     })
   }
 
-  deleteCard(data) {
-    this._cardId = data.id;
-    return this._request(`cards/${this._cardId}`, {
+  deleteCard(id) {
+    /*this._cardId = data.id;*/
+    return this._request(`cards/${id}`, {
       method: 'DELETE',
       headers: this._headers
     })
   }
 
-  sendLikes(data) {
-    this._cardId = data.id;
-    return this._request(`cards/${this._cardId}/likes`, {
+  changeLikeCardStatus(id, isLiked) {
+    if (isLiked) {
+      return this.deleteLikes(id);
+    } else {
+      return this.sendLikes(id);
+    }
+  }
+
+  sendLikes(id) {
+   /* this._cardId = data.id;*/
+    return this._request(`cards/likes/${id}`, {
       method: 'PUT',
       headers: this._headers
     })
   }
 
-  deleteLikes(data) {
-    this._cardId = data.id;
-    return this._request(`cards/${this._cardId}/likes`, {
+  deleteLikes(id) {
+   /* this._cardId = data.id;*/
+    return this._request(`cards/likes/${id}`, {
       method: 'DELETE',
       headers: this._headers
     })
   }
 
-  sendNewAvatar(data) {
+  sendNewAvatar(avatarLink) {
     return this._request(`users/me/avatar`, {
     method: 'PATCH',
     headers: this._headers,
     body: JSON.stringify({
-      avatar: data.avatar
+      avatar: avatarLink
     })
   })
   }
