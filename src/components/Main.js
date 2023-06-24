@@ -6,7 +6,6 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 function Main({ props }) {
   const currentUser = React.useContext(CurrentUserContext);
 
-
   return (
     <main>
       <section className="profile">
@@ -14,12 +13,12 @@ function Main({ props }) {
           <img
             className="profile__avatar"
             src = {currentUser.avatar}
-            /*style={{ backgroundImage: `url(${currentUser.avatar})` }}*/
           />
+
           <button
             className="profile__avatar-edit"
             onClick={props.onEditAvatar}
-          ></button>
+          />
         </div>
         <div className="profile__info">
           <div className="profile__block">
@@ -29,7 +28,7 @@ function Main({ props }) {
               aria-label="Редактирование профиля пользователя"
               className="profile__edit-button"
               onClick={props.onEditProfile}
-            ></button>
+            />
           </div>
           <h2 className="profile__profession">{currentUser.about}</h2>
         </div>
@@ -38,7 +37,7 @@ function Main({ props }) {
           aria-label="Добавление новых фотографий"
           className="profile__add-button"
           onClick={props.onAddPlace}
-        ></button>
+        />
       </section>
 
       <section className="photo-grid">
