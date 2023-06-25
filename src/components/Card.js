@@ -26,6 +26,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
         className="photo-grid__image"
         onClick={handleClick}
         src = {card.link}
+        alt = {card.name}
         /*style={{ backgroundImage: `url(${card.link})` }}*/
       />
       {isOwn && <button className='photo-grid__trash' onClick={handleDeleteClick} />}

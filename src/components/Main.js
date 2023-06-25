@@ -12,6 +12,7 @@ function Main({ props }) {
         <div className="profile__avatar-container">
           <img
             className="profile__avatar"
+            alt ='Аватар пользователя'
             src = {currentUser.avatar}
           />
 
